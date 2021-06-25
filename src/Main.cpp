@@ -62,6 +62,10 @@ int main() {
     }
   }
 
+  // Cleanup
+  SDL_DestroyTexture(tex);
+  SDL_DestroyRenderer(ren);
+  SDL_DestroyWindow(win);
   SDL_Quit();
   return 0;
 }
