@@ -10,7 +10,7 @@
 
 int palette[SIZE][3];
 
-void generatePalette() {
+void generateColors() {
   for (int i = 0; i <= SIZE; i++) {
     palette[i][0] = i;
     palette[i][1] = i;
@@ -50,12 +50,12 @@ int main() {
     return 1;
   }
 
-  generatePalette();
   SDL_Window *window;
   SDL_Renderer *renderer;
   SDL_CreateWindowAndRenderer(WIDTH, HEIGHT, SDL_WINDOW_SHOWN, &window,
                               &renderer);
 
+  generateColors();
   bool done = SDL_FALSE;
   while (!done) {
     SDL_Event e;
