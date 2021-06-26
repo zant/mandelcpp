@@ -26,7 +26,8 @@ double map(int n, double start1, double stop1, double start2, double stop2) {
 void renderMandelbrot(SDL_Renderer *ren) {
   for (int x = 0; x <= WIDTH; x++) {
     for (int y = 0; y <= HEIGHT; y++) {
-      std::complex<double> c(map(x, 0, WIDTH, -2.0, 2.0), map(y, 0, HEIGHT, -2.0, 2.0));
+      std::complex<double> c(map(x, 0, WIDTH, -2.0, 2.0),
+                             map(y, 0, HEIGHT, -2.0, 2.0));
       std::complex<double> z(0.0, 0.0);
       int counter = 0;
 
